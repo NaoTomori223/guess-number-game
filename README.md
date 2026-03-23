@@ -1,7 +1,6 @@
 # 🎯 Guess Number Game
 
-A simple and interactive number guessing game built with python.
-This project is designed to practice basic programming concepts such as loops(while), conditionals(if-elif-else), file operations(open, read, write, close)and user input handling.
+An interactive number guessing game built with JavaScript, featuring multiple difficulty levels and score tracking.
 
 ---
 
@@ -18,7 +17,6 @@ https://naotomori223.github.io/guess-number-game/
 <img width="500" height="500" alt="QQ_1774265204672" src="https://github.com/user-attachments/assets/e9f6b047-4c25-4087-a55b-dcefc7f14462" />
 <img width="500" height="800" src="https://github.com/user-attachments/assets/789fd5f4-6c68-465b-8ba4-54270d2a618b" />
 
-
 ---
 
 ## 🚀 Features
@@ -26,51 +24,42 @@ https://naotomori223.github.io/guess-number-game/
 - 🎯 Multiple difficulty levels (Easy / Medium / Hard)
 - 🏆 Best score tracking using browser storage
 - ⚠️ Input validation for better user experience
-- 🔄 Originally built in Python, then converted to a web-based JavaScript app
+- 🔄 Restart game functionality
+- 🌐 Fully playable in the browser
 
 ---
 
-## 🕹️ How to Play
+## 🧠 About This Project
 
-1. Run the program
-2. The system will generate a random number within a given range
-3. Enter your guess
-4. The program will tell you:
-
-   * 📉 Too low
-   * 📈 Too high
-   * ✅ Correct!
-
-Try to guess the number in as few attempts as possible!
+This project was originally implemented in Python (CLI version),
+and later converted into a web-based JavaScript application.
 
 ---
 
-## 🛠️ Installation & Run
+## 🛠️ Tech Stack
 
-### Option 1: Clone the repository
+HTML
+CSS
+JavaScript
 
-```bash
+---
+
+## 🚀 How to Run Locally
+
 git clone https://github.com/NaoTomori223/guess-number-game.git
 cd guess-number-game
-```
+open index.html
 
-### Option 2: Run directly
+---
 
-Depending on your language:
+## 🔮 Future Improvements
 
-**Python:**
+Add animations and sound effects
+Add timer / scoring system
+Improve UI design
+Mobile responsiveness
 
-```bash
-python main.py
-```
-
-### Option 3: Click the website
-
-```bash
-https://naotomori223.github.io/guess-number-game/
-```
-
-
+---
 
 ## 📂 Project Structure
 
@@ -88,31 +77,10 @@ guess-number-game/
 
 ## 💡 What I Learned
 
-* Handling user input
-* Writing conditional logic
-* Using loops effectively
-* Structuring a small project
-* How to make a web
-* How to use css to decorate the web
-* How to use javascript to implement the game
-
----
-
-## 🔮 Future Improvements
-
-* Add difficulty levels (Easy / Medium / Hard)
-* Build a GUI or web version 
-* Add score tracking system
-* Improve user experience and UI
-
----
-
-## 🤝 Contributing
-
-This is a beginner-friendly project.
-Feel free to fork, improve, and submit pull requests!
-Originally implemented in Python (CLI version),
-then converted into a browser-based JavaScript application.
+- How to convert a Python CLI application into a web-based JavaScript app
+- Managing game state in a browser environment
+- Using localStorage to persist data
+- Improving user interaction through UI design
 
 ---
 
