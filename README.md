@@ -5,12 +5,18 @@ This project is designed to practice basic programming concepts such as loops(wh
 
 ---
 
+## 🌐 Demo
+
+https://naotomori223.github.io/guess-number-game/
+
+---
+
 ## 🚀 Features
 
-* Random number generation
-* User input with feedback (too high / too low)
-* Multiple attempts tracking
-* Simple and clean game logic
+- 🎯 Multiple difficulty levels (Easy / Medium / Hard)
+- 🏆 Best score tracking using browser storage
+- ⚠️ Input validation for better user experience
+- 🔄 Originally built in Python, then converted to a web-based JavaScript app
 
 ---
 
