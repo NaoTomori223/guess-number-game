@@ -1,7 +1,6 @@
-
 // === Best Score（用浏览器存储代替文件） ===
 function loadBestScore() {
-  let best = localStorage.getItem("bestScore");
+  const best = localStorage.getItem("bestScore");
   return best ? Number(best) : null;
 }
 
@@ -19,7 +18,7 @@ let currentLevel = "2"; // 默认中等难度
 
 // === 开始游戏（选择难度） ===
 function startGame(level) {
-  currentLevel = level; // ⭐ 记录当前难度
+  currentLevel = level;
 
   if (level === "1") {
     low = 1;
@@ -27,7 +26,7 @@ function startGame(level) {
   } else if (level === "2") {
     low = 1;
     high = 100;
-  } else if (level === "3") {
+  } else {
     low = 1;
     high = 200;
   }
@@ -41,17 +40,19 @@ function startGame(level) {
     `Range: ${low} ~ ${high}`;
   document.getElementById("result").textContent = "";
   document.getElementById("guessInput").value = "";
+
+  updateBestDisplay();
 }
 
 // === 检查猜测 ===
 function checkGuess() {
-  let input = document.getElementById("guessInput").value;
-  let result = document.getElementById("result");
+  const input = document.getElementById("guessInput").value;
+  const result = document.getElementById("result");
 
-  let guess = Number(input);
+  const guess = Number(input);
 
   // 输入检查
-  if (isNaN(guess)) {
+  if (input === "" || isNaN(guess)) {
     result.textContent = "❗ Please enter a valid number!";
     return;
   }
@@ -73,30 +74,26 @@ function checkGuess() {
       document.getElementById("best").textContent =
         `🏆 New Best Score: ${best}`;
     } else {
-      document.getElementById("best").textContent =
-        `Best Score: ${best}`;
+      updateBestDisplay();
     }
   }
+}
+
+// === 更新 best 显示（统一管理） ===
+function updateBestDisplay() {
+  const bestElement = document.getElementById("best");
+  bestElement.textContent =
+    best !== null ? `Best Score: ${best}` : "No record yet!";
 }
 
 // === 重新开始（保持当前难度） ===
 function restartGame() {
   startGame(currentLevel);
   document.getElementById("result").textContent = "🔄 Game restarted!";
-  document.getElementById("best").textContent =
-  best !== null ? `Best Score: ${best}` : "No record yet!";
 }
 
 // === 页面加载时初始化 ===
 window.onload = function () {
-  if (best !== null) {
-    document.getElementById("best").textContent =
-      `Best Score: ${best}`;
-  } else {
-    document.getElementById("best").textContent =
-      "No record yet!";
-  }
-
-  // 默认启动一局游戏（中等难度）
+  updateBestDisplay();
   startGame(currentLevel);
 };
