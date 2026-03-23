@@ -1,4 +1,4 @@
-let currentLevel;
+let currentLevel = "2";
 // === Best Score（用浏览器存储代替文件） ===
 function loadBestScore() {
   let best = localStorage.getItem("bestScore");
@@ -83,6 +83,8 @@ function checkGuess() {
 function restartGame() {
   startGame(currentLevel);
   document.getElementById("result").textContent = "🔄 Game restarted!";
+  document.getElementById("best").textContent =
+  best !== null ? `Best Score: ${best}` : "No record yet!";
 }
 
 // === 页面加载时初始化 ===
