@@ -12,10 +12,14 @@ https://naotomori223.github.io/guess-number-game/
 
 ## 👀 Presentation
 <img width="462" height="800" alt="QQ_1774251906887" src="https://github.com/user-attachments/assets/b74e8f31-fee8-4f6c-afa8-400985e74ddb" />
-<img width="500" height="500" alt="QQ_1774265168096" src="https://github.com/user-attachments/assets/d6ea3862-fc42-4182-8818-fade43c0d53b" />
-<img width="500" height="500" alt="QQ_1774265182936" src="https://github.com/user-attachments/assets/8f6b2408-5d01-4c3a-a740-c30b45889088" />
-<img width="500" height="500" alt="QQ_1774265204672" src="https://github.com/user-attachments/assets/e9f6b047-4c25-4087-a55b-dcefc7f14462" />
-<img width="500" height="800" src="https://github.com/user-attachments/assets/789fd5f4-6c68-465b-8ba4-54270d2a618b" />
+<img width="500" height="500" alt="QQ_1774270294460" src="https://github.com/user-attachments/assets/834a9e07-4569-456e-92b6-014d92b4e6c7" />
+<img width="500" height="500" alt="QQ_1774270308444" src="https://github.com/user-attachments/assets/7e8f0427-35e2-4472-a36a-6ceed47862fa" />
+<img width="500" height="500" alt="QQ_1774270317352" src="https://github.com/user-attachments/assets/ff34d070-9b45-4a8f-95cc-7fc1b26b6a58" />
+<img width="500" height="500" alt="QQ_1774270328150" src="https://github.com/user-attachments/assets/98446da9-5b96-46ef-9b7d-25304f2e354e" />
+<img width="500" height="500" alt="QQ_1774270337397" src="https://github.com/user-attachments/assets/0e2324ca-c3a3-47e6-baf7-90aee504f946" />
+<img width="500" height="500" alt="QQ_1774270348195" src="https://github.com/user-attachments/assets/d75cd44f-9a22-44d3-835d-f09e343eff87" />
+<img width="500" height="500" alt="QQ_1774270276563" src="https://github.com/user-attachments/assets/536e7e2c-6734-4922-ae39-698641bc7cff" />
+<img width="500" height="800" src="https://github.com/user-attachments/assets/d6cdd02b-b50d-40af-a6ad-1030ec29747f" />
 
 ---
 
