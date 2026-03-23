@@ -48,6 +48,12 @@ Depending on your language:
 python main.py
 ```
 
+### Option 3: Click the website
+
+```bash
+https://naotomori223.github.io/guess-number-game/
+```
+
 
 
 ## 📂 Project Structure
@@ -57,6 +63,9 @@ guess-number-game/
 │── main.py        # Main game logic
 │── LICENSE        # legal document
 │── README.md      # Project documentation
+│──index.html      # Make the web
+│──script.js       # Implement the function of the game
+│──style.css       # The style of web
 ```
 
 ---
@@ -67,13 +76,16 @@ guess-number-game/
 * Writing conditional logic
 * Using loops effectively
 * Structuring a small project
+* How to make a web
+* How to use css to decorate the web
+* How to use javascript to implement the game
 
 ---
 
 ## 🔮 Future Improvements
 
 * Add difficulty levels (Easy / Medium / Hard)
-* Build a GUI or web version
+* Build a GUI or web version 
 * Add score tracking system
 * Improve user experience and UI
 
@@ -83,6 +95,8 @@ guess-number-game/
 
 This is a beginner-friendly project.
 Feel free to fork, improve, and submit pull requests!
+Originally implemented in Python (CLI version),
+then converted into a browser-based JavaScript application.
 
 ---
 
