@@ -11,6 +11,16 @@ https://naotomori223.github.io/guess-number-game/
 
 ---
 
+## 👀 Presentation
+<img width="462" height="800" alt="QQ_1774251906887" src="https://github.com/user-attachments/assets/b74e8f31-fee8-4f6c-afa8-400985e74ddb" />
+<img width="500" height="500" alt="QQ_1774265168096" src="https://github.com/user-attachments/assets/d6ea3862-fc42-4182-8818-fade43c0d53b" />
+<img width="500" height="500" alt="QQ_1774265182936" src="https://github.com/user-attachments/assets/8f6b2408-5d01-4c3a-a740-c30b45889088" />
+<img width="500" height="500" alt="QQ_1774265204672" src="https://github.com/user-attachments/assets/e9f6b047-4c25-4087-a55b-dcefc7f14462" />
+<img width="500" height="800" src="https://github.com/user-attachments/assets/789fd5f4-6c68-465b-8ba4-54270d2a618b" />
+
+
+---
+
 ## 🚀 Features
 
 - 🎯 Multiple difficulty levels (Easy / Medium / Hard)
@@ -118,13 +128,6 @@ GitHub: https://github.com/NaoTomori223
 
 ---
 
-## 👀 Presentation
-<img width="462" height="1264" alt="QQ_1774251906887" src="https://github.com/user-attachments/assets/b74e8f31-fee8-4f6c-afa8-400985e74ddb" />
-<img width="2559" height="1489" alt="QQ_1774265168096" src="https://github.com/user-attachments/assets/d6ea3862-fc42-4182-8818-fade43c0d53b" />
-<img width="2559" height="1488" alt="QQ_1774265182936" src="https://github.com/user-attachments/assets/8f6b2408-5d01-4c3a-a740-c30b45889088" />
-<img width="2559" height="1492" alt="QQ_1774265204672" src="https://github.com/user-attachments/assets/e9f6b047-4c25-4087-a55b-dcefc7f14462" />
-
-![e4addde6652a982e575b6e87996fae51](https://github.com/user-attachments/assets/72e83b46-3b19-4617-a326-a6656910424e)
 
 
 
