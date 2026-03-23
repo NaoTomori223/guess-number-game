@@ -54,8 +54,9 @@ python main.py
 
 ```bash
 guess-number-game/
-│── main.py / index.js   # Main game logic
-│── README.md            # Project documentation
+│── main.py        # Main game logic
+│── LICENSE        # legal document
+│── README.md      # Project documentation
 ```
 
 ---
@@ -94,4 +95,10 @@ This project is open-source and available under the MIT License.
 ## 👤 Author
 
 GitHub: https://github.com/NaoTomori223
+
+---
+
+## 👀 Presentation
+
+<img width="462" height="1264" alt="QQ_1774251906887" src="https://github.com/user-attachments/assets/b74e8f31-fee8-4f6c-afa8-400985e74ddb" />
 
