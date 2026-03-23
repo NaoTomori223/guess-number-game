@@ -80,8 +80,8 @@ function checkGuess() {
 
 // === 重新开始（保持当前难度） ===
 function restartGame() {
+  alert("Restart clicked!");
   startGame(currentLevel);
-  document.getElementById("result").textContent = "🔄 Game restarted!";
 }
 
 // === 页面加载时初始化 ===
