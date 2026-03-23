@@ -45,6 +45,12 @@ function checkGuess() {
     return;
   }
 
+  function restartGame() {
+  document.getElementById("result").textContent = "";
+  document.getElementById("guessInput").value = "";
+  startGame("2"); // 默认中等
+}
+
   attempts++;
 
   if (guess < secret) {
