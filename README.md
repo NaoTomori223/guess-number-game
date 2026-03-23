@@ -68,9 +68,9 @@ guess-number-game/
 │── main.py        # Main game logic
 │── LICENSE        # legal document
 │── README.md      # Project documentation
-│──index.html      # Make the web
-│──script.js       # Implement the function of the game
-│──style.css       # The style of web
+│── index.html     # Make the web
+│── script.js      # Implement the function of the game
+│── style.css      # The style of web
 ```
 
 ---
