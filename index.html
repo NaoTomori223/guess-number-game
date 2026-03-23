@@ -7,21 +7,26 @@
 </head>
 <body>
 
-<h1>🎯 Guess Number Game</h1>
+  <div class="container">
+    <h1>🎯 Guess the Number</h1>
 
-<p id="best"></p>
+    <p id="best"></p>
 
-<h3>Select Difficulty</h3>
-<button onclick="startGame('1')">Easy (1~50)</button>
-<button onclick="startGame('2')">Medium (1~100)</button>
-<button onclick="startGame('3')">Hard (1~200)</button>
+    <div class="difficulty">
+      <button onclick="startGame('1')">Easy</button>
+      <button onclick="startGame('2')">Medium</button>
+      <button onclick="startGame('3')">Hard</button>
+    </div>
 
-<p id="range"></p>
+    <p id="range"></p>
 
-<input type="number" id="guessInput" placeholder="Enter your guess">
-<button onclick="checkGuess()">Submit</button>
+    <input type="number" id="guessInput" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Submit</button>
 
-<p id="result"></p>
+    <p id="result"></p>
+
+    <button class="restart" onclick="restartGame()">🔄 Restart</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
