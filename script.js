@@ -1,4 +1,4 @@
-let currentLevel = "2";
+
 // === Best Score（用浏览器存储代替文件） ===
 function loadBestScore() {
   let best = localStorage.getItem("bestScore");
