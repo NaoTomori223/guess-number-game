@@ -1,7 +1,8 @@
 import random
 import os
 
-best_file = "best_score.txt" # Define one file to set the best score
+best_file = "best_score.txt"  # Define one file to set the best score
+
 
 def load_best_score():
     """search the history best score, if no file, return None"""
@@ -10,10 +11,12 @@ def load_best_score():
             return int(f.read().strip())
     return None
 
+
 def save_best_score(score):
     """set the new best score"""
     with open(best_file, "w") as f:
         f.write(str(score))
+
 
 def choose_difficulty():
     """choose the difficulty level, return low, high"""
@@ -32,6 +35,7 @@ def choose_difficulty():
         else:
             print("Entering is inavailable!")
 
+
 def play_game():
     """start the game, and return guess times"""
     low, high = choose_difficulty()
@@ -48,11 +52,12 @@ def play_game():
             elif guess > secret:
                 print("too greater")
             else:
-                print(f"Congratulations！You guess {attempts} times. answer is {secret}.")
+                print(f"🎉Congratulations！You guess {attempts} times. answer is {secret}.")
                 return attempts
         except ValueError:
             print("Pls enter an integer!")
-            
+
+
 def main():
     print("=== Guess Number Game ===")
     best = load_best_score()
@@ -63,18 +68,21 @@ def main():
 
     while True:
         attempts = play_game()
+
         # Check if the record has been broken
         if best is None or attempts < best:
             best = attempts
             save_best_score(best)
-            print(f"🎉 Congratulations！You only guess {attempts} times！")
+            print(f"🎉 Congratulations！You only guess {attempts} times！New best score: {attempts} times")
         else:
             print(f"You guess {attempts} times，the best score also is {best} times.")
+
         # Ask if play again
         again = input("\nPlay again?(y/n)：").strip().lower()
         if again != 'y':
             print("Thank you, bye!")
             break
+
 
 if __name__ == "__main__":
     main()
