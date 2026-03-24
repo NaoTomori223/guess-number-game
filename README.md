@@ -8,7 +8,6 @@ An interactive browser-based number guessing game built with JavaScript, featuri
 ---
 
 ## 👀 Presentation
-<img width="462" height="800" alt="QQ_1774251906887" src="https://github.com/user-attachments/assets/b74e8f31-fee8-4f6c-afa8-400985e74ddb" />
 <img width="600" height="600" alt="QQ_1774346507624" src="https://github.com/user-attachments/assets/6aefd79e-6b1a-4b3e-82c5-2aa0712921ca" />
 <img width="600" height="600" alt="QQ_1774346559646" src="https://github.com/user-attachments/assets/3a245cf6-e9a5-4b09-9229-101d1f9ce094" />
 <img width="600" height="900" alt="QQ_1774346559646" src="https://github.com/user-attachments/assets/2620f3f4-8897-4077-9663-ef956bf23dd3" />
