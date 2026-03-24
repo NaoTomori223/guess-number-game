@@ -1,4 +1,4 @@
-// === Best Score（用浏览器存储代替文件） ===
+// === Best Score ===
 function loadBestScore() {
   const best = localStorage.getItem("bestScore");
   return best ? Number(best) : null;
@@ -8,7 +8,7 @@ function saveBestScore(score) {
   localStorage.setItem("bestScore", score);
 }
 
-// === 全局变量 ===
+// === Global value ===
 let low = 1;
 let high = 100;
 let secret = 0;
@@ -16,7 +16,7 @@ let attempts = 0;
 let best = loadBestScore();
 let currentLevel = "2"; // 默认中等难度
 
-// === 开始游戏（选择难度） ===
+// === start choosing difficulty level ===
 function startGame(level) {
   currentLevel = level;
 
@@ -31,7 +31,7 @@ function startGame(level) {
     high = 200;
   }
 
-  // 生成随机数
+  // generate a random integer
   secret = Math.floor(Math.random() * (high - low + 1)) + low;
   attempts = 0;
 
@@ -44,14 +44,14 @@ function startGame(level) {
   updateBestDisplay();
 }
 
-// === 检查猜测 ===
+// === check guess ===
 function checkGuess() {
   const input = document.getElementById("guessInput").value;
   const result = document.getElementById("result");
 
   const guess = Number(input);
 
-  // 输入检查
+  // check input
   if (input === "" || isNaN(guess)) {
     result.textContent = "❗ Please enter a valid number!";
     return;
@@ -67,7 +67,7 @@ function checkGuess() {
     result.textContent =
       `🎉 Correct! You guessed in ${attempts} attempts. Answer: ${secret}`;
 
-    // 更新 best score
+    // new best score
     if (best === null || attempts < best) {
       best = attempts;
       saveBestScore(best);
@@ -79,20 +79,31 @@ function checkGuess() {
   }
 }
 
-// === 更新 best 显示（统一管理） ===
+// === print new best sorce ===
 function updateBestDisplay() {
   const bestElement = document.getElementById("best");
   bestElement.textContent =
     best !== null ? `Best Score: ${best}` : "No record yet!";
 }
 
-// === 重新开始（保持当前难度） ===
+// === restart ===
 function restartGame() {
   startGame(currentLevel);
   document.getElementById("result").textContent = "🔄 Game restarted!";
 }
 
-// === 页面加载时初始化 ===
+// === reset best score ===
+function resetBestScore() {
+  if (confirm("Are you sure you want to reset best score?")) {
+    localStorage.removeItem("bestScore");
+    best = null;
+    updateBestDisplay();
+    document.getElementById("result").textContent =
+      "🗑️ Best score has been reset!";
+  }
+}
+
+// === Initialize when the page loads ===
 window.onload = function () {
   updateBestDisplay();
   startGame(currentLevel);
