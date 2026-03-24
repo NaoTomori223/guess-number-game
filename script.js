@@ -21,7 +21,11 @@ let currentLevel = "2";
 
 let bestScore = load("bestScore");
 let bestTime = load("bestTime");
-let leaderboard = load("leaderboard") || [];
+let leaderboard = load("leaderboard") || {
+  "1": [],
+  "2": [],
+  "3": []
+};
 
 // 👉 关键修复（防 undefined）
 if (bestScore === undefined) bestScore = null;
@@ -91,11 +95,33 @@ function checkGuess() {
 
 // === Records ===
 function updateRecords(attempts, timeUsed) {
+
   // Best score
   if (bestScore === null || attempts < bestScore) {
     bestScore = attempts;
     save("bestScore", bestScore);
   }
+
+  // Best time
+  if (bestTime === null || timeUsed < bestTime) {
+    bestTime = timeUsed;
+    save("bestTime", bestTime);
+  }
+
+  // ⭐ according diffirent level to record diffirently
+  let levelBoard = leaderboard[currentLevel];
+
+  levelBoard.push({ attempts, time: timeUsed });
+
+  levelBoard.sort((a, b) => a.time - b.time);
+
+  leaderboard[currentLevel] = levelBoard.slice(0, 5);
+
+  save("leaderboard", leaderboard);
+
+  updateBestDisplay();
+  updateLeaderboard();
+}
 
   // Best time
   if (bestTime === null || timeUsed < bestTime) {
@@ -134,14 +160,15 @@ function updateLeaderboard() {
   const list = document.getElementById("leaderboard");
   list.innerHTML = "";
 
-  leaderboard.forEach((item, i) => {
+  const levelBoard = leaderboard[currentLevel];
+
+  levelBoard.forEach((item, i) => {
     const li = document.createElement("li");
     li.textContent =
       `#${i + 1} - ${item.attempts} tries | ${(item.time / 1000).toFixed(2)}s`;
     list.appendChild(li);
   });
 }
-
 // === Timer ===
 function startTimer() {
   clearInterval(timerInterval);
