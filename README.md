@@ -30,18 +30,20 @@ https://naotomori223.github.io/guess-number-game/
 - ⚠️ Input validation for better user experience
 - 🔄 Restart game functionality
 - 🌐 Fully playable in the browser
+- 🔄 Reset and check the best score
 
 ---
 
 ## 🧠 About This Project
 
 This project was originally implemented in Python (CLI version),
-and later converted into a web-based JavaScript application.
+and later converted into a web-based JavaScript application. At the same time, I add more interactive function to this projects.
 
 ---
 
 ## 🛠️ Tech Stack
 
+Python
 HTML
 CSS
 JavaScript
