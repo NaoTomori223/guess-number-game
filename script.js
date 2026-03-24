@@ -1,7 +1,12 @@
 // === Load / Save ===
 function load(key) {
-  const data = localStorage.getItem(key);
-  return data ? JSON.parse(data) : null;
+  try {
+    const data = localStorage.getItem(key);
+    if (data === null) return null;
+    return JSON.parse(data);
+  } catch {
+    return null;
+  }
 }
 
 function save(key, value) {
@@ -17,6 +22,10 @@ let currentLevel = "2";
 let bestScore = load("bestScore");
 let bestTime = load("bestTime");
 let leaderboard = load("leaderboard") || [];
+
+// 👉 关键修复（防 undefined）
+if (bestScore === undefined) bestScore = null;
+if (bestTime === undefined) bestTime = null;
 
 let startTime = 0;
 let timerInterval = null;
@@ -56,7 +65,7 @@ function checkGuess() {
 
   const guess = Number(input);
 
-  if (!input || isNaN(guess)) {
+  if (input === "" || isNaN(guess)) {
     result.textContent = "❗ Enter a valid number!";
     return;
   }
@@ -108,14 +117,14 @@ function updateRecords(attempts, timeUsed) {
 // === UI ===
 function updateBestDisplay() {
   const bestText =
-  bestScore !== null
-    ? `🎯 Best Attempts: ${bestScore}`
-    : "No record";
+    bestScore !== null && bestScore !== undefined
+      ? `🎯 Best Attempts: ${bestScore}`
+      : "No record";
 
-const timeText =
-  bestTime !== null
-    ? `⏱ Best Time: ${(bestTime / 1000).toFixed(2)}s`
-    : "No record";
+  const timeText =
+    bestTime !== null && bestTime !== undefined
+      ? `⏱ Best Time: ${(bestTime / 1000).toFixed(2)}s`
+      : "No record";
 
   document.getElementById("best").textContent =
     `${bestText} | ${timeText}`;
