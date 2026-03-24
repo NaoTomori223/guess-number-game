@@ -1,81 +1,39 @@
 body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* Card container */
-.container {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 30px;
-  border-radius: 16px;
   text-align: center;
-  width: 320px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  backdrop-filter: blur(10px);
 }
 
-/* Title */
-h1 {
-  margin-bottom: 10px;
+.container {
+  margin-top: 80px;
+  background: rgba(0,0,0,0.3);
+  padding: 30px;
+  border-radius: 12px;
+  display: inline-block;
 }
 
-.subtitle {
-  font-size: 14px;
-  color: #ccc;
-}
-
-/* Buttons */
 button {
   margin: 5px;
   padding: 10px 15px;
   border: none;
-  border-radius: 8px;
-  background: #3498db;
-  color: white;
+  border-radius: 6px;
   cursor: pointer;
-  transition: 0.2s;
+  background: #ff7b00;
+  color: white;
 }
 
 button:hover {
-  background: #2980b9;
-  transform: scale(1.05);
+  background: #ff9500;
 }
 
-/* Input */
 input {
   padding: 10px;
-  width: 60%;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
-  margin-right: 5px;
-}
-
-/* Input area */
-.input-area {
-  margin: 15px 0;
-}
-
-/* Result text */
-#result {
   margin-top: 10px;
-  font-weight: bold;
 }
 
-/* Win animation */
 .win {
-  background: linear-gradient(135deg, #2ecc71, #27ae60) !important;
-  transition: 0.5s;
-}
-
-/* Mobile responsive */
-@media (max-width: 400px) {
-  .container {
-    width: 90%;
-  }
+  background: linear-gradient(135deg, #00c853, #64dd17);
 }
