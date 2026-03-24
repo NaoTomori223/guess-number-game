@@ -39,6 +39,8 @@ function startGame(level) {
   secret = Math.floor(Math.random() * (high - low + 1)) + low;
   attempts = 0;
 
+  document.getElementById("result").textContent =
+  "👉 Please choose a difficulty to start!";
   document.body.classList.remove("win");
 
   document.getElementById("range").textContent =
