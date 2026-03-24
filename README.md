@@ -1,10 +1,12 @@
-# 🎯 Guess Number Game
+🎯 Interactive Guess Number Game (JavaScript, DOM, LocalStorage)
 
-An interactive number guessing game built with JavaScript, featuring multiple difficulty levels and score tracking.
+Built a browser-based number guessing game with multiple difficulty levels<br>
+Implemented timer system and best score persistence using localStorage<br>
+Designed responsive UI with interactive feedback and animations<br>
 
 ---
 
-## 🌐 Demo
+## 🎮 Live Demo
 
 https://naotomori223.github.io/guess-number-game/
 
