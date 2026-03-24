@@ -27,10 +27,11 @@ let leaderboard = load("leaderboard") || {
   "3": []
 };
 
-// 👉 关键修复（防 undefined）
+// avoid undefined
 if (bestScore === undefined) bestScore = null;
 if (bestTime === undefined) bestTime = null;
 
+// === Timer ===
 let startTime = 0;
 let timerInterval = null;
 let isGameActive = false;
@@ -55,6 +56,7 @@ function startGame(level) {
   document.body.classList.remove("win");
 
   updateBestDisplay();
+  updateLeaderboard();
 }
 
 // === Guess ===
@@ -76,9 +78,11 @@ function checkGuess() {
 
   attempts++;
 
-  if (guess < secret) result.textContent = "📉 Too low!";
-  else if (guess > secret) result.textContent = "📈 Too high!";
-  else {
+  if (guess < secret) {
+    result.textContent = "📉 Too low!";
+  } else if (guess > secret) {
+    result.textContent = "📈 Too high!";
+  } else {
     stopTimer();
 
     const timeUsed = Date.now() - startTime;
@@ -87,7 +91,8 @@ function checkGuess() {
     result.textContent = `🎉 Correct! Attempts: ${attempts}, Time: ${seconds}s`;
     document.body.classList.add("win");
 
-    document.getElementById("winSound").play();
+    const sound = document.getElementById("winSound");
+    if (sound) sound.play();
 
     updateRecords(attempts, timeUsed);
   }
@@ -108,31 +113,20 @@ function updateRecords(attempts, timeUsed) {
     save("bestTime", bestTime);
   }
 
-  // ⭐ according diffirent level to record diffirently
+  // ⭐ Leaderboard by level
   let levelBoard = leaderboard[currentLevel];
+
+  if (!levelBoard) {
+    levelBoard = [];
+  }
 
   levelBoard.push({ attempts, time: timeUsed });
 
+  // 按时间排序
   levelBoard.sort((a, b) => a.time - b.time);
 
+  // 只保留前5名
   leaderboard[currentLevel] = levelBoard.slice(0, 5);
-
-  save("leaderboard", leaderboard);
-
-  updateBestDisplay();
-  updateLeaderboard();
-}
-
-  // Best time
-  if (bestTime === null || timeUsed < bestTime) {
-    bestTime = timeUsed;
-    save("bestTime", bestTime);
-  }
-
-  // Leaderboard
-  leaderboard.push({ attempts, time: timeUsed });
-  leaderboard.sort((a, b) => a.time - b.time);
-  leaderboard = leaderboard.slice(0, 5);
 
   save("leaderboard", leaderboard);
 
@@ -143,12 +137,12 @@ function updateRecords(attempts, timeUsed) {
 // === UI ===
 function updateBestDisplay() {
   const bestText =
-    bestScore !== null && bestScore !== undefined
+    bestScore !== null
       ? `🎯 Best Attempts: ${bestScore}`
       : "No record";
 
   const timeText =
-    bestTime !== null && bestTime !== undefined
+    bestTime !== null
       ? `⏱ Best Time: ${(bestTime / 1000).toFixed(2)}s`
       : "No record";
 
@@ -160,7 +154,7 @@ function updateLeaderboard() {
   const list = document.getElementById("leaderboard");
   list.innerHTML = "";
 
-  const levelBoard = leaderboard[currentLevel];
+  const levelBoard = leaderboard[currentLevel] || [];
 
   levelBoard.forEach((item, i) => {
     const li = document.createElement("li");
@@ -169,6 +163,7 @@ function updateLeaderboard() {
     list.appendChild(li);
   });
 }
+
 // === Timer ===
 function startTimer() {
   clearInterval(timerInterval);
@@ -202,9 +197,15 @@ function restartGame() {
 function resetBestScore() {
   if (confirm("Reset all records?")) {
     localStorage.clear();
+
     bestScore = null;
     bestTime = null;
-    leaderboard = [];
+    leaderboard = {
+      "1": [],
+      "2": [],
+      "3": []
+    };
+
     updateBestDisplay();
     updateLeaderboard();
   }
