@@ -1,14 +1,9 @@
-🎯 Interactive Guess Number Game (JavaScript, DOM, LocalStorage)
+# 🎯 Guess Number Game
 
-Built a browser-based number guessing game with multiple difficulty levels<br>
-Implemented timer system and best score persistence using localStorage<br>
-Designed responsive UI with interactive feedback and animations<br>
+An interactive browser-based number guessing game built with JavaScript, featuring real-time feedback, timer tracking, and persistent leaderboard.
 
----
-
-## 🎮 Live Demo
-
-https://naotomori223.github.io/guess-number-game/
+## 🚀 Live Demo
+👉 https://naotomori223.github.io/guess-number-game/
 
 ---
 
@@ -20,87 +15,70 @@ https://naotomori223.github.io/guess-number-game/
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-- 🎯 Multiple difficulty levels (Easy / Medium / Hard)
-- 🏆 Best score tracking using browser storage
-- ⚠️ Input validation for better user experience
-- 🔄 Restart game functionality
-- 🌐 Fully playable in the browser
-- 🔄 Reset and check the best score
-
----
-
-## 🧠 About This Project
-
-This project was originally implemented in Python (CLI version),
-and later converted into a web-based JavaScript application. 
-At the same time, I add more interactive function to this projects. 
-Available on both mobile and desktop devices.
+- 🎮 Multiple difficulty levels (Easy / Medium / Hard)
+- ⏱ Real-time timer with millisecond precision
+- 🏆 Best score (minimum attempts) tracking
+- ⚡ Best time tracking
+- 📊 Top 5 leaderboard system
+- 💾 Persistent data storage using localStorage
+- 🎨 Dynamic UI feedback and win animations
+- 🔄 Restart and reset functionality
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-Python
-HTML
-CSS
-JavaScript
-
----
-
-## 🚀 How to Run Locally
-
-git clone https://github.com/NaoTomori223/guess-number-game.git
-cd guess-number-game
-open index.html
+- HTML
+- CSS
+- JavaScript (DOM manipulation, localStorage)
 
 ---
 
-## 🔮 Future Improvements
+## 🧠 What I Learned
 
-Add animations and sound effects
-Add timer / scoring system
-Improve UI design
-Mobile responsiveness
+- Managing application state in a front-end game
+- Using localStorage for persistent data without a backend
+- Handling user input and validation
+- Implementing timer logic and controlling execution flow
+- Separating game logic from UI updates
+
+---
+
+## 💡 Design Thinking
+
+- Designed a lightweight leaderboard system without a backend
+- Used localStorage to simulate persistent storage
+- Optimized timer updates to balance performance and accuracy
+- Ensured clean user experience with clear feedback loops
+
+---
+
+## 🔧 Future Improvements
+
+- Difficulty-based leaderboard (separate ranking for each level)
+- Add sound effects and animations
+- Mobile responsiveness improvements
+- User authentication & cloud leaderboard (full-stack version)
 
 ---
 
 ## 📂 Project Structure
 
-```bash
-guess-number-game/
-│── main.py        # Main game logic
-│── LICENSE        # legal document
-│── README.md      # Project documentation
-│── index.html     # Make the web
-│── script.js      # Implement the function of the game
-│── style.css      # The style of web
-```
+guess-number-game/<br>
+├── index.html<br>
+├── style.css<br>
+├── script.js<br>
 
 ---
 
-## 💡 What I Learned
-
-- How to convert a Python CLI application into a web-based JavaScript app
-- Managing game state in a browser environment
-- Using localStorage to persist data
-- Improving user interaction through UI design
-
----
-
-## 📄 License
+## 📜 License
 
 This project is open-source and available under the MIT License.
 
----
-
 ## 👤 Author
 
-GitHub: https://github.com/NaoTomori223
+https://github.com/NaoTomori223
 
 ---
-
-
-
-
