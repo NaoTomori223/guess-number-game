@@ -143,5 +143,5 @@ function resetTimer() {
 // === Init ===
 window.onload = function () {
   updateBestDisplay();
-  startGame(currentLevel);
+  restTimer()
 };
