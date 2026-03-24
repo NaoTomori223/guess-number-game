@@ -25,9 +25,6 @@ let isGameActive = false;
 function startGame(level) {
   currentLevel = level;
 
-  resetTimer();
-  startTimer();
-
   if (level === "1") {
     low = 1; high = 50;
   } else if (level === "2") {
@@ -36,6 +33,9 @@ function startGame(level) {
     low = 1; high = 200;
   }
 
+  resetTimer();
+  startTimer();
+  
   secret = Math.floor(Math.random() * (high - low + 1)) + low;
   attempts = 0;
 
