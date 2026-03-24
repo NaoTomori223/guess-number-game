@@ -14,10 +14,14 @@ let high = 100;
 let secret = 0;
 let attempts = 0;
 let best = loadBestScore();
-let currentLevel = "2"; // 默认中等难度
+let currentLevel = "2"; 
+let startTime = 0;
+let timerInterval = null;
 
 // === start choosing difficulty level ===
 function startGame(level) {
+  resetTimer();
+  startTimer();
   currentLevel = level;
 
   if (level === "1") {
@@ -46,6 +50,7 @@ function startGame(level) {
 
 // === check guess ===
 function checkGuess() {
+  stopTimer();
   const input = document.getElementById("guessInput").value;
   const result = document.getElementById("result");
 
@@ -101,6 +106,27 @@ function resetBestScore() {
     document.getElementById("result").textContent =
       "🗑️ Best score has been reset!";
   }
+}
+
+function startTimer() {
+  startTime = Date.now();
+
+  timerInterval = setInterval(() => {
+    const now = Date.now();
+    const seconds = Math.floor((now - startTime) / 1000);
+
+    document.getElementById("timer").textContent =
+      `⏱ Time: ${seconds}s`;
+  }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+}
+
+function resetTimer() {
+  clearInterval(timerInterval);
+  document.getElementById("timer").textContent = "⏱ Time: 0s";
 }
 
 // === Initialize when the page loads ===
