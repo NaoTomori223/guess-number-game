@@ -107,11 +107,13 @@ function updateRecords(attempts, timeUsed) {
 
 // === UI ===
 function updateBestDisplay() {
-  const bestText = bestScore
+  const bestText =
+  bestScore !== null
     ? `🎯 Best Attempts: ${bestScore}`
     : "No record";
 
-  const timeText = bestTime
+const timeText =
+  bestTime !== null
     ? `⏱ Best Time: ${(bestTime / 1000).toFixed(2)}s`
     : "No record";
 
