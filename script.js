@@ -83,13 +83,13 @@ function checkGuess() {
 // === Records ===
 function updateRecords(attempts, timeUsed) {
   // Best score
-  if (!bestScore || attempts < bestScore) {
+  if (bestScore === null || attempts < bestScore) {
     bestScore = attempts;
     save("bestScore", bestScore);
   }
 
   // Best time
-  if (!bestTime || timeUsed < bestTime) {
+  if (bestTime === null || timeUsed < bestTime) {
     bestTime = timeUsed;
     save("bestTime", bestTime);
   }
