@@ -2,6 +2,7 @@
 function loadBestScore() {
   const best = localStorage.getItem("bestScore");
   return best ? Number(best) : null;
+  stopTimer();
 }
 
 function saveBestScore(score) {
@@ -50,7 +51,6 @@ function startGame(level) {
 
 // === check guess ===
 function checkGuess() {
-  stopTimer();
   const input = document.getElementById("guessInput").value;
   const result = document.getElementById("result");
 
